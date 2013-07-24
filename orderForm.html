@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+  </head>
+  <body>
+
+    <h1>Please Review Your Order</h1>
+    <p>Date/time stamp</p>
+
+    <form class="form-horizontal">
+    <fieldset>
+
+    <!-- Form Name -->
+    <legend>Form Name</legend>
+
+    <!-- Text input-->
+    <div class="control-group">
+      <label class="control-label" for="textinput">Hoodie Style</label>
+      <div class="controls">
+        <input id="textinput" name="textinput" type="text" placeholder="Hoodie Style" class="input-xlarge" required="">
+
+      </div>
+    </div>
+
+    <!-- Text input-->
+    <div class="control-group">
+      <label class="control-label" for="textinput">Hoodie Size</label>
+      <div class="controls">
+        <input id="textinput" name="textinput" type="text" placeholder="Hoodie Size" class="input-xlarge" required="">
+
+      </div>
+    </div>
+
+    <!-- Text input-->
+    <div class="control-group">
+      <label class="control-label" for="textinput">Logo Choice</label>
+      <div class="controls">
+        <input id="textinput" name="textinput" type="text" placeholder="Logo Choice" class="input-xlarge" required="">
+
+      </div>
+    </div>
+
+    <!-- Textarea -->
+    <div class="control-group">
+      <label class="control-label" for="textarea">Subtotal</label>
+      <div class="controls">
+        <textarea id="textarea" name="textarea">Amount x Qty</textarea>
+      </div>
+    </div>
+
+    <!-- Multiple Checkboxes -->
+    <div class="control-group">
+      <label class="control-label" for="checkboxes">Shipping Options</label>
+      <div class="controls">
+        <label class="checkbox" for="checkboxes-0">
+          <input type="checkbox" name="checkboxes" id="checkboxes-0" value="I will pick up my hoodie">
+          I will pick up my hoodie
+        </label>
+        <label class="checkbox" for="checkboxes-1">
+          <input type="checkbox" name="checkboxes" id="checkboxes-1" value="I need this shipped to me">
+          I need this shipped to me
+        </label>
+      </div>
+    </div>
+
+    <!-- Prepended text-->
+    <div class="control-group">
+      <label class="control-label" for="prependedtext">Shipping Cost</label>
+      <div class="controls">
+        <div class="input-prepend">
+          <span class="add-on">prepend</span>
+          <input id="prependedtext" name="prependedtext" class="input-xlarge" placeholder="Amount" type="text">
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Prepended text-->
+    <div class="control-group">
+      <label class="control-label" for="prependedtext">Total</label>
+      <div class="controls">
+        <div class="input-prepend">
+          <span class="add-on">prepend</span>
+          <input id="prependedtext" name="prependedtext" class="input-xlarge" placeholder="Amount" type="text" required="">
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Text input-->
+    <div class="control-group">
+      <label class="control-label" for="textinput">Email</label>
+      <div class="controls">
+        <input id="textinput" name="textinput" type="text" placeholder="email" class="input-xlarge">
+
+      </div>
+    </div>
+
+    <!-- Button -->
+    <div class="control-group">
+      <label class="control-label" for="singlebutton"></label>
+      <div class="controls">
+        <button id="singlebutton" name="singlebutton" class="btn btn-primary">Checkout!</button>
+      </div>
+    </div>
+
+    </fieldset>
+    </form>
+
+
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/underscore.js"></script>
+    <script src ="backbone-min.js"></script>
+  </body>
+</html>
