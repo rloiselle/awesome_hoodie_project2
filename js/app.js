@@ -9,6 +9,9 @@ $(document).ready(function(){
   $('#school-logo .dropdown-menu li a').on('click',function(){
     $('#school-logo .btn:first-child').text($(this).text());
     $('#school-logo .btn:first-child').val($(this).text());
+    // $('#school-logo .btn:first-child').html('<span class="caret"></span>');
+
+
   });
 
    $('#size .dropdown-menu li a').on('click',function(){
@@ -25,8 +28,15 @@ $(document).ready(function(){
     var schoolLogo = $('#school-logo .btn:first-child').val();
     var size = $('#size .btn:first-child').val();
     var quanity = $('#quanity .btn:first-child').val();
+    $('#submit').data("logo",schoolLogo);
+    $('#submit').data("size",size);
+    $('#submit').data("quanity",quanity);
+
     console.log(schoolLogo);
     console.log(size);
     console.log(quanity);
+    console.log($('#submit'));
+    console.log(document.getElementById('submit'));
+    console.log($('#submit').data());
   });
 });
