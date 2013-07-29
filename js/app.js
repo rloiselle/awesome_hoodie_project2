@@ -7,24 +7,25 @@ $(document).ready(function(){
   $('.dropdown-toggle').dropdown();
 
  var counter = 0;
-  $('#school-logo .dropdown-menu li a').on('click',function(){
+  $('#school-logo .dropdown-menu li a').on('click',function (e){
+    e.preventDefault();
     $('#school-logo .btn:first-child').text($(this).text());
     $('#school-logo .btn:first-child').val($(this).text());
-    // $('#school-logo .btn:first-child').html('<span class="caret"></span>');
-    counter = counter + 1;
-
+    counter++;
   });
 
-   $('#size .dropdown-menu li a').on('click',function(){
+   $('#size .dropdown-menu li a').on('click',function (e){
+    e.preventDefault();
     $('#size .btn:first-child').text($(this).text());
     $('#size .btn:first-child').val($(this).text());
-    counter = counter + 1;
+    counter++;
   });
 
-  $('#quanity .dropdown-menu li a').on('click',function(){
+  $('#quanity .dropdown-menu li a').on('click',function (e){
+    e.preventDefault();
     $('#quanity .btn:first-child').text($(this).text());
     $('#quanity .btn:first-child').val($(this).text());
-    counter = counter + 1;
+    counter++;
     if (counter == 3) {
        $('#submit').addClass('btn btn-success');
     }
@@ -46,6 +47,6 @@ $(document).ready(function(){
     console.log(document.getElementById('submit'));
     console.log($('#submit').data());
     console.log(counter);
-   
   });
+  
 });

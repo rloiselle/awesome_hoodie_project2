@@ -18,6 +18,25 @@ require 'sinatra'
 # DataMapper.finalize.auto_upgrade!
 
 get '/' do
-	erb :index
+	erb :home
 end
+
+get '/hoodie_1' do
+	erb :hoodie_1
+end
+
+get '/hoodie_2' do
+	erb :hoodie_2
+end
+
+get '/hoodie_3' do
+	erb :hoodie_3
+end
+
+get '/hoodie_4' do
+	erb :hoodie_4
+end
+
+
+
 
