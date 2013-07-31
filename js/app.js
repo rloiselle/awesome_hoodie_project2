@@ -5,7 +5,7 @@ $(document).ready(function(){
   });
 
   $('.dropdown-toggle').dropdown();
- 
+
   $('#school-logo .dropdown-menu li a').on('click',function(){
     $('#school-logo .btn:first-child').text($(this).text());
     $('#school-logo .btn:first-child').val($(this).text());
@@ -29,4 +29,9 @@ $(document).ready(function(){
     console.log(size);
     console.log(quanity);
   });
+
+  // $(function(){
+  //   $("#submit").modal();
+  // });
+
 });
