@@ -37,6 +37,16 @@ get '/hoodie_4' do
 	erb :hoodie_4
 end
 
+get '/tshirt_1' do
+	erb :tshirt_1
+end
+
+get '/tshirt_2' do
+	erb :tshirt_2
+end
+
+
+
 
 
 
