@@ -6,30 +6,26 @@ $(document).ready(function(){
 
   $('.dropdown-toggle').dropdown();
 
-<<<<<<< HEAD
  var counter = 0;
   $('#school-logo .dropdown-menu li a').on('click',function (e){
-    e.preventDefault();
-=======
-  $('#school-logo .dropdown-menu li a').on('click',function(){
->>>>>>> 0779093bbe0cabe2d280bcda6f2e73471397b198
     $('#school-logo .btn:first-child').text($(this).text());
     $('#school-logo .btn:first-child').val($(this).text());
     counter++;
+    e.preventDefault();
   });
 
    $('#size .dropdown-menu li a').on('click',function (e){
-    e.preventDefault();
     $('#size .btn:first-child').text($(this).text());
     $('#size .btn:first-child').val($(this).text());
     counter++;
+    e.preventDefault();
   });
 
   $('#quanity .dropdown-menu li a').on('click',function (e){
-    e.preventDefault();
     $('#quanity .btn:first-child').text($(this).text());
     $('#quanity .btn:first-child').val($(this).text());
     counter++;
+    e.preventDefault();
     if (counter == 3) {
        $('#submit').addClass('btn btn-success');
     }
@@ -52,13 +48,5 @@ $(document).ready(function(){
     console.log($('#submit').data());
     console.log(counter);
   });
-<<<<<<< HEAD
   
-=======
-
-  // $(function(){
-  //   $("#submit").modal();
-  // });
-
->>>>>>> 0779093bbe0cabe2d280bcda6f2e73471397b198
 });
