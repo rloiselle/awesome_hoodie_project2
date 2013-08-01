@@ -68,8 +68,31 @@ body {
     border-radius: 0 3px 3px 0;
   }
 
-  .btn-group {
-    width: 900px;
+  .btn {
+    width: 165px;
+  }
+
+  .xlarge {
+    width: 275px;
+  }
+
+  .large {
+    width: 225px;
+  }
+
+
+  .dropdown-toggle {
+    width: 30px;
+  }
+
+  .back {
+    text-decoration: none;
+    color: black;
+  }
+
+  a .back:hover {
+    text-decoration: none;
+    color: black;
   }
 
   /*.headline {
