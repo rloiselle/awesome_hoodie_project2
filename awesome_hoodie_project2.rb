@@ -19,10 +19,15 @@ end
 
 DataMapper.finalize
 
+
+use Rack::Auth::Basic, "Protected Area" do |username, password|
+	username == "admin" && password == "hatsandpants"
+end
+
 get '/' do
-	# binding.pry
 	erb :home
 end
+
 
 get '/hoodie_1' do
 	erb :hoodie_1
