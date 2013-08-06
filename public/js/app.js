@@ -40,13 +40,43 @@ $(document).ready(function(){
       $('#submit').data("size",size);
       $('#submit').data("quanity",quanity);
     }
-    console.log(schoolLogo);
-    console.log(size);
-    console.log(quanity);
-    console.log($('#submit'));
-    console.log(document.getElementById('submit'));
-    console.log($('#submit').data());
-    console.log(counter);
+    // console.log(schoolLogo);
+    // console.log(size);
+    // console.log(quanity);
+    // console.log($('#submit'));
+    // console.log(document.getElementById('submit'));
+    // console.log($('#submit').data());
+    // console.log(counter);
+    // var parm = $(this).data("logo");
+    // console.log(parm)
+    // $("order_review#logord").add(parm);
+     // $(this).data("logo").load('order_review.erb');
+
+    window.location.href ="/order_review/" + schoolLogo + "/" + size;
+
   });
+
+    // $("#submit").click(function(){
+    //     $("#logord").load("order_review.erb");
+    // });
+
+// $("hoodie_1 #submit").on('click',function() {
+//     $.ajax({
+//         type: "POST",
+//         url: "order_review #logord",
+//         data: {name: this.name, value: this.value}
+//     });
+// });
+
+  // $('#logord').load('ajax/hoodie_1.erb #submit');
+
+  // $("#submit").on("click", function (event) {
+
+  // var parm = $(this).data("logo").val();
+  //do something here with parameter on page 2 (or any page in the dom)
+
+  // $("#logord").html(parm);
+
+// });
 
 });

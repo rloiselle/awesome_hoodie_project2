@@ -45,7 +45,9 @@ get '/tshirt_2' do
 	erb :tshirt_2
 end
 
-get '/order_review' do
+get '/order_review/:logo/:size' do
+  @logo = params[:logo]
+  @size = params[:size]
   erb :order_review
 end
 
@@ -53,7 +55,11 @@ get '/thank_you' do
   erb :thank_you
 end
 
-
+post '/order_review/:logo/:size' do
+  @logo = params[:logo]
+  @size = params[:size]
+  erb :order_review
+end
 
 
 
