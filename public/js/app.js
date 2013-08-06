@@ -40,6 +40,8 @@ $(document).ready(function(){
       $('#submit').data("size",size);
       $('#submit').data("quanity",quanity);
     }
+    window.location.href ="/order_review/" + schoolLogo + "/" + size;
+
     console.log(schoolLogo);
     console.log(size);
     console.log(quanity);
