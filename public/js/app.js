@@ -48,5 +48,5 @@ $(document).ready(function(){
     console.log($('#submit').data());
     console.log(counter);
   });
-  
+
 });
