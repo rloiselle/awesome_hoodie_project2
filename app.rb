@@ -58,15 +58,23 @@ get '/orders' do
 	erb :orders
 end
 
-get '/order_review/:logo/:size' do
+get '/order_review/:logo/:size/:quantity/:subtotal/:date/:style' do
 	@logo = params[:logo]
 	@size = params[:size]
+	@quantity = params[:quantity]
+	@subtotal = params[:subtotal]
+	@date = params[:date]
+	@style = params[:style]
 	erb :order_review
 end
 
-post '/order_review/:logo/:size' do
+post '/order_review/:logo/:size/:quantity/:subtotal/:date/:style' do
 	@logo = params[:logo]
 	@size = params[:size]
+	@quantity = params[:quantity]
+	@subtotal = params[:subtotal]
+	@date = params[:date]
+	@style = params[:style]
 	erb :order_review
 end
 

@@ -21,9 +21,9 @@ $(document).ready(function(){
     e.preventDefault();
   });
 
-  $('#quanity .dropdown-menu li a').on('click',function (e){
-    $('#quanity .btn:first-child').text($(this).text());
-    $('#quanity .btn:first-child').val($(this).text());
+  $('#quantity .dropdown-menu li a').on('click',function (e){
+    $('#quantity .btn:first-child').text($(this).text());
+    $('#quantity .btn:first-child').val($(this).text());
     counter++;
     e.preventDefault();
     if (counter == 3) {
@@ -31,20 +31,25 @@ $(document).ready(function(){
     }
   });
 
-  $('#submit').on('click',function(){
+  $('#submit').on('click',function (e){
     var schoolLogo = $('#school-logo .btn:first-child').val();
     var size = $('#size .btn:first-child').val();
-    var quanity = $('#quanity .btn:first-child').val();
+    var quantity = $('#quantity .btn:first-child').val();
+    var price = 25;
+    var subtotal = (price * quantity);
+    var date = new Date();
+    var style = "Bella+Canvas (c3939) Unisex Triblend Lightweight Hoodie";
     if (counter == 3) {
       $('#submit').data("logo",schoolLogo);
       $('#submit').data("size",size);
-      $('#submit').data("quanity",quanity);
+      $('#submit').data("quantity",quantity);
     }
-    window.location.href ="/order_review/" + schoolLogo + "/" + size;
+    window.location.href ="/order_review/" + schoolLogo + "/" + size + "/" + quantity + "/" + subtotal + "/" + date + "/" + style;
+    e.preventDefault();
 
     console.log(schoolLogo);
     console.log(size);
-    console.log(quanity);
+    console.log(quantity);
     console.log($('#submit'));
     console.log(document.getElementById('submit'));
     console.log($('#submit').data());
@@ -52,3 +57,13 @@ $(document).ready(function(){
   });
 
 });
+
+// var brandName = function(){
+//   if (schoolLogo == "Portland Code School") {
+//     return "Bella+Canvas (c3939) Unisex Triblend Lightweight Hoodie";
+//   }
+// };
+
+
+
+

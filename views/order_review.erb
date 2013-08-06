@@ -11,32 +11,32 @@
     <div class="row">
       <br>
       <div class="span2">
-        <img style="height: 240px;" src="img/placekitten.jpg" class="img-polaroid">
+        <img style="height: 240px;" src="/img/placekitten.jpg" class="img-polaroid">
       </div>
         <table class="table table-striped span5 lead">
           <tr>
             <td class="pull-right"><strong>Date</strong></td>
-            <td>"Date & Time Stamp"</td>
+            <td><%= @date %></td>
           </tr>
           <tr>
             <td class="pull-right"><strong>Style</strong></td>
-            <td>"Name of product style & #"</td>
+            <td><%= @style %></td>
           </tr>
           <tr>
             <td class="pull-right"><strong>Size</strong></td>
-            <td>@size</td>
+            <td><%= @size %></td>
           </tr>
           <tr>
             <td class="pull-right"><strong>Qty</strong></td>
-            <td>"Order quantity"</td>
+            <td><%= @quantity %></td>
           </tr>
-          <tr>
+       <!--    <tr>
             <td class="pull-right"><strong>Color</strong></td>
             <td>Grey/heather gray</td>
-          </tr>
+          </tr> -->
           <tr>
             <td class="pull-right"><strong>Logo</strong></td>
-            <td>@logo</td>
+            <td><%= @logo %></td>
           </tr>
         </table>
     </div>
@@ -44,7 +44,7 @@
       <dl class="dl-horizontal span3 offset2">
         <dt class="lead">Order Subtotal:</dt>
         <dd class="well well-small">
-          $0.00
+          <%= @subtotal %>
         </dd>
       </dl>
     </div>
@@ -105,7 +105,7 @@
     </div>
     <div class="row span6">
       <a href="/#hoodies" class="btn btn-large btn-info">« Back to Shopping</a>-->
-      <script src="js/paypal-button.min.js?merchant=rebecca.loiselle-facilitator@gmail.com"
+      <script src="/js/paypal-button.min.js?merchant=rebecca.loiselle-facilitator@gmail.com"
           data-button="buynow"
           data-name="hoodie"
           data-callback="http://58hb.localtunnel.com"
