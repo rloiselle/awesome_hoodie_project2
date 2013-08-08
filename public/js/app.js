@@ -29,41 +29,54 @@ $(document).ready(function(){
     if (counter == 3) {
        $('#submit').addClass('btn btn-success');
     }
+     
   });
 
-  $('#submit').on('click',function (e){
+
+
+
+
+    $('#order_form').on('submit',function (){
+
     var schoolLogo = $('#school-logo .btn:first-child').val();
     var size = $('#size .btn:first-child').val();
     var quantity = $('#quantity .btn:first-child').val();
-    var price = 25;
-    var subtotal = (price * quantity);
-    var date = new Date();
-    var style = "Bella+Canvas (c3939) Unisex Triblend Lightweight Hoodie";
-    if (counter == 3) {
-      $('#submit').data("logo",schoolLogo);
-      $('#submit').data("size",size);
-      $('#submit').data("quantity",quantity);
-    }
-    window.location.href ="/order_review/" + schoolLogo + "/" + size + "/" + quantity + "/" + subtotal + "/" + date + "/" + style;
-    e.preventDefault();
+    
+      $('#order_logo').val(schoolLogo);
+      $('#order_size').val(size);
+      $('#order_quantity').val(quantity);
+      if ($('#order_logo').val() == null || $('#order_logo').val() == "") {
+        alert('Please be sure to select a logo.');
+        return false;
+      }
+      if ($('#order_size').val() == null || $('#order_size').val() == "") {
+        alert('Please be sure to select a size.');
+        return false;
+      }
+      if ($('#order_quantity').val() == null || $('#order_quantity').val() == "") {
+        alert('Please be sure to select a quantity.');
+        return false;
+      }
+      
 
-    console.log(schoolLogo);
-    console.log(size);
-    console.log(quantity);
-    console.log($('#submit'));
-    console.log(document.getElementById('submit'));
-    console.log($('#submit').data());
-    console.log(counter);
   });
+
+
 
 });
 
-// var brandName = function(){
-//   if (schoolLogo == "Portland Code School") {
-//     return "Bella+Canvas (c3939) Unisex Triblend Lightweight Hoodie";
-//   }
-// };
 
 
+
+
+    // var validCheck = function() {
+    //   var x = document.forms["order_form"]["order_quantity"].value;
+    //   if (x == null || x== "")
+    //     {
+    //       alert("Order quantity must be filled out");
+    //       return false;
+    //     }
+
+    //   });
 
 

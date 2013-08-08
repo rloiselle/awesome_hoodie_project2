@@ -77,11 +77,17 @@
 <div class="span4">
   <br />
   <br />
-  <div class="btn-group" >
-    <a class="addtocart" href="order_review"><button id="submit" class="btn">
-      Add To Shopping Cart
-    </button></a>
-  </div>
+  <form method="post" action="/order_review" id="order_form">
+    <input name="order[quantity]" type="hidden" id="order_quantity" value="">
+    <input name="order[size]" type="hidden" id="order_size" value="">
+    <input name="order[logo]" type="hidden" id="order_logo" value="">
+    <input name="order[style]" type="hidden" id="order_style" value="Bella+Canvas (c3939) Unisex Triblend">
+    <div class="btn-group" >
+      <a class="addtocart" href="order_review"><button id="submit" class="btn">
+        Add To Shopping Cart
+      </button></a>
+    </div>
+  </form>
 </div>
 <div class="span4">
   <br />
@@ -101,7 +107,7 @@
 
 
 
-
+      <div class="span12">
         <h3>Fiber Content</h3>
         <ul>
           <li>50% polyester</li>
@@ -149,6 +155,7 @@
           </tr>
         </table>
       </div>
+ </div>
 
 
 

@@ -58,23 +58,14 @@ get '/orders' do
 	erb :orders
 end
 
-get '/order_review/:logo/:size/:quantity/:subtotal/:date/:style' do
-	@logo = params[:logo]
-	@size = params[:size]
-	@quantity = params[:quantity]
-	@subtotal = params[:subtotal]
-	@date = params[:date]
-	@style = params[:style]
-	erb :order_review
-end
+post '/order_review' do
+	@logo = params[:order][:logo]
+	@size = params[:order][:size]
+	@quantity = params[:order][:quantity].to_i
+	@style = params[:order][:style]
+	@subtotal = @quantity * 25
+	@date = Time.now.asctime
 
-post '/order_review/:logo/:size/:quantity/:subtotal/:date/:style' do
-	@logo = params[:logo]
-	@size = params[:size]
-	@quantity = params[:quantity]
-	@subtotal = params[:subtotal]
-	@date = params[:date]
-	@style = params[:style]
 	erb :order_review
 end
 
