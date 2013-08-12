@@ -6,9 +6,16 @@ $(document).ready(function(){
 
   $('.dropdown-toggle').dropdown();
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
  var counter = 0;
   $('#school-logo .dropdown-menu li a').on('click',function (e){
     e.preventDefault();
+=======
+>>>>>>> eed99737edf00140af9c800dc2c5834ae9694aa6
+  $('#school-logo .dropdown-menu li a').on('click',function(){
+>>>>>>> 0779093bbe0cabe2d280bcda6f2e73471397b198
     $('#school-logo .btn:first-child').text($(this).text());
     $('#school-logo .btn:first-child').val($(this).text());
     counter++;
@@ -40,6 +47,7 @@ $(document).ready(function(){
       $('#submit').data("size",size);
       $('#submit').data("quanity",quanity);
     }
+    window.location.href ="/order_review/" + schoolLogo + "/" + size;
     console.log(schoolLogo);
     console.log(size);
     console.log(quanity);
@@ -48,5 +56,19 @@ $(document).ready(function(){
     console.log($('#submit').data());
     console.log(counter);
   });
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
   
+=======
+>>>>>>> eed99737edf00140af9c800dc2c5834ae9694aa6
+
+  // $(function(){
+  //   $("#submit").modal();
+  // });
+
+<<<<<<< HEAD
+=======
+>>>>>>> 0779093bbe0cabe2d280bcda6f2e73471397b198
+>>>>>>> eed99737edf00140af9c800dc2c5834ae9694aa6
 });

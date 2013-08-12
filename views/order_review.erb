@@ -1,0 +1,125 @@
+
+<div class="container" id="top">
+    <div class="row">
+      <a href="/#hoodies" class="shop-btn-top btn btn-large btn-info">« Back to Shopping</a>
+    </div>
+      <div class="row span6">
+        <h2>Please Review Your Order</h2>
+      </div>
+      <br>
+      <div class="row span6">
+        <img style="height: 240px;" src=<%= @image %> class="img-polaroid">
+      </div>
+      <div class="row">
+        <div class="span6">
+          <table class="table table-striped span6 lead">
+    <form>
+            <tr>
+              <td><strong>Date</strong></td>
+              <td><%= @date %></td>
+            </tr>
+            <tr>
+              <td><strong>Style</strong></td>
+              <td><%= @style %></td>
+            </tr>
+            <tr>
+              <td><strong>Size</strong></td>
+              <td><%= @size %></td>
+            </tr>
+            <tr>
+              <td><strong>Qty</strong></td>
+              <td><%= @quantity %></td>
+            </tr>
+       <!--    <tr>
+            <td class="pull-right"><strong>Color</strong></td>
+            <td>Grey/heather gray</td>
+          </tr> -->
+            <tr>
+              <td><strong>Logo</strong></td>
+              <td><%= @logo %></td>
+            </tr>
+
+                <tr>
+                  <td class="lead"><strong>Order Subtotal: $</strong></td>
+                  <td class="well well-small">
+                    <%= @subtotal %>
+  
+                  </td>
+                </tr> 
+            </table>
+        </div>
+
+        <div class="ship-fix span5 offset1">
+          <h3>Shipping Options</h3>
+          <div class="alert">
+            <button type="button" class="close" data-dismiss="alert">&times;</button>
+            <strong>Order Delivery Info:</strong> The estimated delivery time is two weeks. You will receive an email notification when your order is received with a pick-up or shipping date.
+          </div>
+          <p>You can pick up your order when it's ready at iconartistry in Portland and not pay any shipping. If you need your order to be shipped to you, select the shipping option below.</p>
+            <div>
+              <address class="text-left span4">
+                  <h4>Pick-up Location</h4>
+                  <strong>iconartistry</strong><br>
+                  # & St. Name<br>
+                  Portland, OR 97???<br>
+                  <abbr title="Phone">P:</abbr> (123) 456-7890
+              </address>
+            </div>  
+        </div>
+      </div> <!-- end row??? -->
+
+      <div class="row span6">
+        <label class="radio lead">
+        <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+          I will pick up my order when it's ready
+        </label>
+        <label class="radio lead">
+        <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+          I need to have my order shipped to me
+        </label>
+      </div>
+    <!-- </div> -->
+      <div>
+        <br>
+          <dl class="dl-horizontal span6">
+            <dt class="lead">Shipping Total:</dt>
+          <dd>
+          <div class="well well-small">
+            $0.00
+          </div>
+          </dd>
+            <dt class="lead">Paypal fee:</dt>
+          <dd>
+          <div class="well well-small">
+            $0.00
+          </div>
+          </dd>
+            <dt class="lead">Total:</dt>
+          <dd>
+            <div class="well well-small">
+            $0.00
+            </div>
+          </dd>
+          <div class="text-left">
+            <h3>Contact info</h3>
+              <p>Please enter your email address here so we can notify you about your order.</p>
+          <input class="input-xlarge" type="text" placeholder="Email Address">
+          </div>
+          </dl>
+      </div>
+      <div class="row span6">
+        <a href="/#hoodies" class="btn btn-large btn-info">« Back to Shopping</a>
+        <br />
+        <br />
+          <script src="/js/paypal-button.min.js?merchant=rebecca.loiselle-facilitator@gmail.com"
+          data-button="buynow"
+          data-name="hoodie"
+          data-callback="http://58hb.localtunnel.com"
+          data-return="http://58hb.localtunnel.com"
+          data-env="sandbox"></script>
+      </div>
+ <!--  </div> -->
+</div>
+  <div class="footer">
+    <p>© Company 2013</p>
+  </div>

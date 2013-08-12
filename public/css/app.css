@@ -1,4 +1,3 @@
-
 body {
   padding-top: 20px;
   padding-bottom: 60px;
@@ -69,14 +68,66 @@ body {
   border-radius: 0 3px 3px 0;
 }
 
+.btn {
+  width: 165px;
+}
+
+.xlarge {
+  width: 275px;
+}
+
+.large {
+  width: 225px;
+}
+
+
+.dropdown-toggle {
+  width: 30px;
+}
+
+.back {
+  text-decoration: none;
+  color: black;
+}
+
+a .back:hover {
+  text-decoration: none;
+  color: black;
+}
+
+/*.headline {
+  float: left;
+}*/
+
 .totalBox {
-  padding-top: 20px;
-  padding-bottom: 20px  ;
+padding-top: 20px;
+padding-bottom: 20px;
 }
 
 #myModal {
-  width: 900px; /* SET THE WIDTH OF THE MODAL */
-  smargin: 0px 0 0 -400px;  /*CHANGE MARGINS TO ACCOMODATE THE NEW WIDTH (original = margin: -250px 0 0 -280px;)
+width: 900px;
+margin: 0px 0 0 -400px;
 }
 
+.shareBtn {
+  width: 60px;
+}
 
+/*Used the CSS below to position Go Back button on hoodie_2.erb*/
+.btn-fix {
+  position: absolute;
+  left: 620px; 
+  bottom: 2px;
+}
+
+/*Used the CSS below to position the Shipping Options column on the order_review.erb
+*/
+.ship-fix {
+  position: relative;
+  bottom: 15px;
+}
+
+.shop-btn-top {
+  position: relative;
+  left: 20px;
+}
