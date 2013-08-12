@@ -29,11 +29,7 @@ $(document).ready(function(){
     if (counter == 3) {
        $('#submit').addClass('btn btn-success');
     }
-     
   });
-
-
-
 
 
     $('#order_form').on('submit',function (){
