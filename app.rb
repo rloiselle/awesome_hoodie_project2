@@ -67,7 +67,7 @@ post '/order_review' do
 	@size = params[:order][:size]
 	@quantity = params[:order][:quantity].to_i
 	@style = params[:order][:style]
-	@subtotal = @quantity * 25
+	@subtotal = @quantity * 28
 	@date = Time.now.asctime
 	@image = params[:order][:image]
 
