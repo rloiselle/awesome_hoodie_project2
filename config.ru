@@ -1,6 +1,6 @@
 # config.ru
 
-require "./awesome_hoodie_project2"
+require "./app"
 run Sinatra::Application
 
 

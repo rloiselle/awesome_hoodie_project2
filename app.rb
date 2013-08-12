@@ -4,7 +4,11 @@ require 'dm-core'
 require 'dm-migrations'
 require 'dm-timestamps'
 
-DataMapper.setup(:default, "sqlite3:./hoodie_database.sqlite3")
+if development?
+	DataMapper.setup(:default, "sqlite3:./hoodie_database.sqlite3")
+else
+	DataMapper.setup(:default, ENV["DATABASE_URL"])
+end
 
 class Order
 	include DataMapper::Resource
@@ -65,6 +69,7 @@ post '/order_review' do
 	@style = params[:order][:style]
 	@subtotal = @quantity * 25
 	@date = Time.now.asctime
+	@image = params[:order][:image]
 
 	erb :order_review
 end

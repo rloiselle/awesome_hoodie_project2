@@ -77,17 +77,25 @@
 <div class="span4">
   <br />
   <br />
-  <div class="btn-group" >
+  <form method="post" action="/order_review" id="order_form">
+    <input name="order[quantity]" type="hidden" id="order_quantity" value="">
+    <input name="order[size]" type="hidden" id="order_size" value="">
+    <input name="order[logo]" type="hidden" id="order_logo" value="">
+    <input name="order[style]" type="hidden" id="order_style" value="Bella+Canvas (c3739) Poly-Cotton Fleece Hoodie">
+    <input name="order[image]" type="hidden" id="order_image" value='"img/3739_front_female.jpg"'>
+    <div class="btn-group" >
+      <a class="addtocart" href="order_review">
     <button id="submit" class="btn">
       Add To Shopping Cart
-    </button>
+    </button></a>
   </div>
 </div>
+
 <div class="span4">
   <br />
   <br />
   <div class="btn-group" >
-    <a class="back" href="/"><button id="submit" class="btn btn-info">
+    <a class="back" href="/"><button id="submit" class="btn-fix btn btn-info">
      Go Back
    </button></a>
   </div>
