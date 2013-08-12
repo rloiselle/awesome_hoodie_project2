@@ -10,7 +10,7 @@ gem 'dm-timestamps'
 
 group :production do
 	gem "pg"
-	gem "dm-pg-adapter"
+	gem "dm-postgres-adapter"
 end
 
 group :development do
