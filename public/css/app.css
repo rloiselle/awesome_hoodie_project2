@@ -114,15 +114,15 @@ margin: 0px 0 0 -400px;
 }
 
 /*Used the CSS below to position Go Back button on hoodie_2.erb*/
-.btn-fix {
+/*.btn-fix {
   position: absolute;
-  left: 620px; 
-  bottom: 2px;
-}
+  left: 625px; 
+  bottom: 2px;*/
+/*}*/
 
 /*Used the CSS below to position the Shipping Options column on the order_review.erb
 */
-.ship-fix {
+/*.ship-fix {
   position: relative;
   bottom: 15px;
 
@@ -131,6 +131,6 @@ margin: 0px 0 0 -400px;
 .shop-btn-top {
   position: relative;
   left: 20px;
-}
+}*/
 
 
