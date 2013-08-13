@@ -76,8 +76,8 @@ post '/order_review/:logo/:size' do
 end
 
 post '/ipn' do
-
-  a_hash =params
+  a_hash = params
+  # p a_hash.length
   new_trans = PaypalTransaction.new
 
   def table_attributes
@@ -85,33 +85,21 @@ post '/ipn' do
     ["payment_status", "payment_date", "business", "invoice", "num_cart_items", "item_name1", "item_number1", "quantity1", "last_name",'first_name', 'address_street', 'address_city', 'address_state', 'address_zip', 'mc_gross', 'mc_fee', 'mc_handling', 'mc_shipping']
   end
 
-  def rm_data(a_hash)
-    a_hash.keep_if { |key,value|
-      table_attributes.include?(key)
-    }
+  a_hash.keep_if { |key,value| table_attributes.include?(key) }
+  # p a_hash.length
+
+  a_hash.map do |key,value|
+    new_trans[key] = value
   end
 
-
-  def import_data(a_hash)
-    a_hash.map do |key,value|
-      # if table_attributes.include? key
-        new_trans[key] = value
-      end
-    end
+  new_trans.save
+  # p new_trans.saved?
+  # p new_trans.errors
+  if new_trans.saved? #this is not working
+    200
+  else
+    400
   end
-
-  # a_hash = params
-  # a_hash.
-  # new_trans = PaypalTransaction.create(params)
-  # new_trans.payment_status = a_hash['payment_status']
-  # new_trans.last_name = a_hash['last_name']
-  # new_trans.save
-   p new_trans.saved?
-  # if new_trans.saved?
-  #   return 200
-  # else
-  #   return 400
-  # end
 end
 
 

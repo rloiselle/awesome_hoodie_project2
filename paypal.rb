@@ -12,7 +12,7 @@ class PaypalTransaction
   property :invoice, String  #not sure if we will want this
   property :num_cart_items, Integer
   property :item_name1, String#, :required => true     #x is the item in shopping cart
-  property :item_number1, Integer#, :required => true  #x is the item in shopping cart
+  property :item_number1, String#, :required => true  #x is the item in shopping cart
   property :quantity1, Integer#, :required => true     #x is the item in shopping cart
   #more variables maybe added with button variables
   property :last_name, String#, :required => true
@@ -27,20 +27,8 @@ class PaypalTransaction
   property :mc_shipping, Float#, :required => true
   #Also available is a per item account of fees/amounts
 
-
-
-# def match_data
-#   @params
-# end
-
-
-# def show_data(params)
-#   p params
-# end
-
 end
 
 # DataMapper.auto_migrate!  #auto create tables if they don't exist already
 DataMapper.auto_upgrade!
 DataMapper.finalize   #check integrity of class, call before app interacts with any classes
-
