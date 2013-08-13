@@ -56,27 +56,4 @@ $(document).ready(function(){
 
   });
 
-    // $("#submit").click(function(){
-    //     $("#logord").load("order_review.erb");
-    // });
-
-// $("hoodie_1 #submit").on('click',function() {
-//     $.ajax({
-//         type: "POST",
-//         url: "order_review #logord",
-//         data: {name: this.name, value: this.value}
-//     });
-// });
-
-  // $('#logord').load('ajax/hoodie_1.erb #submit');
-
-  // $("#submit").on("click", function (event) {
-
-  // var parm = $(this).data("logo").val();
-  //do something here with parameter on page 2 (or any page in the dom)
-
-  // $("#logord").html(parm);
-
-// });
-
 });
