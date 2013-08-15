@@ -1,6 +1,7 @@
-
 class PaypalTransaction
+
   include DataMapper::Resource  #links the class to DataMapper, include Resource module
+
   property :id, Serial
   property :payment_status, String#, :required => true
   property :payment_date, DateTime#, :required => true

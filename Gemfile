@@ -17,3 +17,9 @@ group :development do
   gem 'dm-sqlite-adapter'
   gem 'sqlite3'
 end
+
+group :development, :test do
+  gem 'rspec'
+  gem 'guard'
+  gem 'guard-rspec'
+end
