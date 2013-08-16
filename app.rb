@@ -1,24 +1,3 @@
-require 'rubygems'
-require 'sinatra'
-require 'dm-core'
-require 'dm-migrations'
-require 'dm-timestamps'
-
-DataMapper.setup(:default, "sqlite3:./hoodie_database.sqlite3")
-
-class Order
-  include DataMapper::Resource
-  property :id, Serial
-  property :logo, String, :required => true
-  property :hoodie_style, Integer
-  property :size, String, :required => true
-  property :quantity, Integer, :required => true
-  property :email, String, :required => true
-  property :created_at, DateTime
-end
-
-DataMapper.finalize
-
 get '/' do
   # binding.pry
   erb :home
@@ -67,4 +46,14 @@ post '/order_review/:logo/:size' do
   @logo = params[:logo]
   @size = params[:size]
   erb :order_review
+end
+
+post '/ipn' do
+  new_trans = PaypalTransaction.new(params)
+
+  if new_trans.save #this is not working
+    200
+  else
+    400
+  end
 end
