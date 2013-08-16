@@ -24,35 +24,44 @@ class PaypalTransaction
   property :mc_handling, Float#, :required => true
   property :mc_shipping, Float#, :required => true
   #Also available is a per item account of fees/amounts
+  property :items, Text
+  # style: Bella, size: M, logo: pdx.rb, qty: 3
+  # style: Bella, size: L, logo: pdx.rb, qty: 2
+  # style: ITC,   size: M, logo: pdx.rb, qty: 1
 
   has 1, :order
 
   def initialize(params)
-    extract_params_for_initialize(params).map do |key,value|
-      self[key] = value
-    end
-    self.order = Order.new
+    # @params = params
 
+    self.filter_params(params)
+    # self.update(params)
+    # self.order = Order.new(params)
+    # Tests for
+    #   Creating each model
+    #   Filtering params
+    #   Associating the models
   end
 
-  def extract_params_for_initialize(params)
-    params.map do |key,val|
-      cart_params.map do |attr|
-        if key.match(attr)
-          p key + "matches" +attr
-        end
-      end
-    end
+  def filter_paypal_post(params)
+    params.keep_if { |key,value| table_attributes.include?(key) }
+    return params
+  end
+
+    # params.map do |key,val|
+    #   cart_params.map do |attr|
+    #     if key.match(attr)
+    #       p key + " matches " +attr
+    #     end
+    #   end
+    # end
 
     # cart_params.each do |attr|
     #   if params.include?(attr)
     #     p attr
     #   end
     # end
-
-    params.keep_if { |key,value| table_attributes.include?(key) }
-    # p params.length
-    return params
+  def filter_cart_items(params)
   end
 
   def table_attributes
@@ -60,7 +69,7 @@ class PaypalTransaction
     # ["payment_status", "payment_date", "business", "invoice", "num_cart_items", "item_name1", "item_number1", "quantity1", "last_name",'first_name', 'address_street', 'address_city', 'address_state', 'address_zip', 'mc_gross', 'mc_fee', 'mc_handling', 'mc_shipping']
   end
 
-  def cart_params
+  def cart_items
     ["(item_name[0-9]+)", "(item_number[0-9]+)", "(quantity[0-9]+)"]
   end
 
