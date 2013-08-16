@@ -112,3 +112,25 @@ margin: 0px 0 0 -400px;
 .shareBtn {
   width: 60px;
 }
+
+/*Used the CSS below to position Go Back button on hoodie_2.erb*/
+/*.btn-fix {
+  position: absolute;
+  left: 625px; 
+  bottom: 2px;*/
+/*}*/
+
+/*Used the CSS below to position the Shipping Options column on the order_review.erb
+*/
+/*.ship-fix {
+  position: relative;
+  bottom: 15px;
+
+}
+
+.shop-btn-top {
+  position: relative;
+  left: 20px;
+}*/
+
+

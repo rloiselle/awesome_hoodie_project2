@@ -62,6 +62,7 @@ class PaypalTransaction
     #   end
     # end
   def filter_cart_items(params)
+    for
   end
 
   def table_attributes

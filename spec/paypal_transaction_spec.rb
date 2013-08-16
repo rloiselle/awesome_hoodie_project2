@@ -17,7 +17,7 @@ describe PaypalTransaction do
     end
 
     xit "should find item name in params hash" do
-      params = {"item_name1" => "42"}
+      params = {"item_name1" => "hoodie1", "item_name" => "dummy test", "item_number1" => "h1","quantity1" => "1", "item_number" => "h-99", "quantity" => "99", "item_name10" => "hoodie10", "item_number10" => "h10", "quantity10" = "1"  }
       out = capture_stdout do
         transaction = PaypalTransaction.new(params).filter_cart_items(params)
       end
