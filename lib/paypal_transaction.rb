@@ -34,7 +34,7 @@ class PaypalTransaction
   def initialize(params)
     # @params = params
 
-    self.filter_params(params)
+    self.filter_paypal_post(params)
     # self.update(params)
     # self.order = Order.new(params)
     # Tests for
@@ -61,9 +61,8 @@ class PaypalTransaction
     #     p attr
     #   end
     # end
-  def filter_cart_items(params)
-    for
-  end
+  # def filter_cart_items(params)
+  # end
 
   def table_attributes
     ["payment_status", "payment_date", "verify_sign", "business", "invoice", "num_cart_items", "item_namex", "item_numberx", "quantityx", "last_name",'first_name', 'address_street', 'address_city', 'address_state', 'address_zip', 'mc_gross', 'mc_fee', 'mc_handling', 'mc_shipping']
