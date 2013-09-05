@@ -65,8 +65,8 @@ class PaypalTransaction
   # end
 
   def table_attributes
-    ["payment_status", "payment_date", "verify_sign", "business", "invoice", "num_cart_items", "item_namex", "item_numberx", "quantityx", "last_name",'first_name', 'address_street', 'address_city', 'address_state', 'address_zip', 'mc_gross', 'mc_fee', 'mc_handling', 'mc_shipping']
-    # ["payment_status", "payment_date", "business", "invoice", "num_cart_items", "item_name1", "item_number1", "quantity1", "last_name",'first_name', 'address_street', 'address_city', 'address_state', 'address_zip', 'mc_gross', 'mc_fee', 'mc_handling', 'mc_shipping']
+    #["payment_status", "payment_date", "verify_sign", "business", "invoice", "num_cart_items", "item_namex", "item_numberx", "quantityx", "last_name",'first_name', 'address_street', 'address_city', 'address_state', 'address_zip', 'mc_gross', 'mc_fee', 'mc_handling', 'mc_shipping']
+     ["payment_status", "payment_date", "business", "invoice", "num_cart_items", "item_name1", "item_number1", "quantity1", "last_name",'first_name', 'address_street', 'address_city', 'address_state', 'address_zip', 'mc_gross', 'mc_fee', 'mc_handling', 'mc_shipping']
   end
 
   def cart_items
