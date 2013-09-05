@@ -3,7 +3,9 @@ require 'bundler'
 Bundler.require(:default, ENV['RACK_ENV'].to_sym)
 
 require './app.rb'
+
 run Sinatra::Application
+
 
 if development?
   DataMapper.setup(:default, "sqlite3:./db/hoodie_database.sqlite3")
