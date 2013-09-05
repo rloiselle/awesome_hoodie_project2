@@ -15,7 +15,7 @@ end
 
 require './lib/paypal_transaction'
 require './lib/order'
-
+require './newrelic.yml'
 
 DataMapper.auto_upgrade!
 DataMapper.finalize
