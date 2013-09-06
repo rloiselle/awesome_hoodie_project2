@@ -45,7 +45,8 @@ end
 
 post '/ipn' do
   new_trans = PaypalTransaction.new(params)
-  new_trans.update(params)
+  new_trans.attributes = params
+  new_trans.save
   if new_trans.save #this is not working
     200
   else

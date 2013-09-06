@@ -9,9 +9,9 @@ class PaypalTransaction
   property :business, String#, :required => true
   property :invoice, String  #not sure if we will want this
   property :num_cart_items, Integer
-  property :item_name, String#, :required => true     #x is the item in shopping cart
-  property :item_number, String#, :required => true  #x is the item in shopping cart
-  property :quantity, String#, :required => true     #x is the item in shopping cart
+  property :item_name1, String#, :required => true     #x is the item in shopping cart
+  property :item_number1, String#, :required => true  #x is the item in shopping cart
+  property :quantity1, String#, :required => true     #x is the item in shopping cart
   #more variables maybe added with button variables
   property :last_name, String#, :required => true
   property :first_name, String#, :required => true
@@ -24,18 +24,18 @@ class PaypalTransaction
   property :mc_handling, Float#, :required => true
   property :mc_shipping, Float#, :required => true
   #Also available is a per item account of fees/amounts
-  property :items, Text
+  # property :items, Text
   # style: Bella, size: M, logo: pdx.rb, qty: 3
   # style: Bella, size: L, logo: pdx.rb, qty: 2
   # style: ITC,   size: M, logo: pdx.rb, qty: 1
 
-  has 1, :order
+  # has 1, :order
 
   def initialize(params)
     # @params = params
 
     self.filter_paypal_post(params)
-    #self.update(params)
+    # self.update(params)
     # self.order = Order.new(params)
     # Tests for
     #   Creating each model
@@ -45,7 +45,6 @@ class PaypalTransaction
 
   def filter_paypal_post(params)
     params.keep_if { |key,value| table_attributes.include?(key) }
-    p params
   end
 
     # params.map do |key,val|
@@ -67,6 +66,7 @@ class PaypalTransaction
   def table_attributes
     #["payment_status", "payment_date", "verify_sign", "business", "invoice", "num_cart_items", "item_namex", "item_numberx", "quantityx", "last_name",'first_name', 'address_street', 'address_city', 'address_state', 'address_zip', 'mc_gross', 'mc_fee', 'mc_handling', 'mc_shipping']
      ["payment_status", "payment_date", "business", "invoice", "num_cart_items", "item_name1", "item_number1", "quantity1", "last_name",'first_name', 'address_street', 'address_city', 'address_state', 'address_zip', 'mc_gross', 'mc_fee', 'mc_handling', 'mc_shipping']
+    # ["payment_status", "last_name", "first_name"]
   end
 
   def cart_items
