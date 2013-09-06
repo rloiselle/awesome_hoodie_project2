@@ -35,7 +35,7 @@ class PaypalTransaction
     # @params = params
 
     self.filter_paypal_post(params)
-    # self.update(params)
+    #self.update(params)
     # self.order = Order.new(params)
     # Tests for
     #   Creating each model
@@ -45,7 +45,7 @@ class PaypalTransaction
 
   def filter_paypal_post(params)
     params.keep_if { |key,value| table_attributes.include?(key) }
-    return params
+    p params
   end
 
     # params.map do |key,val|
