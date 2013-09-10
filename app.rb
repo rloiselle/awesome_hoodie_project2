@@ -47,7 +47,7 @@ post '/ipn' do
   new_trans = PaypalTransaction.new(params)
   new_trans.attributes = params
   new_trans.save
-  if new_trans.save #this is not working
+  if new_trans.save
     200
   else
     400
