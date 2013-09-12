@@ -1,5 +1,4 @@
 get '/' do
-  # binding.pry
   erb :home
 end
 
@@ -36,15 +35,15 @@ get '/orders' do
   erb :orders
 end
 
-get '/order_review/:logo/:size' do
-  @logo = params[:logo]
-  @size = params[:size]
-  erb :order_review
-end
+post '/order_review' do
+  @logo = params[:order][:logo]
+  @size = params[:order][:size]
+  @quantity = params[:order][:quantity].to_i
+  @style = params[:order][:style]
+  @subtotal = @quantity * 28
+  @date = Time.now.asctime
+  @image = params[:order][:image]
 
-post '/order_review/:logo/:size' do
-  @logo = params[:logo]
-  @size = params[:size]
   erb :order_review
 end
 
@@ -52,7 +51,7 @@ post '/ipn' do
   new_trans = PaypalTransaction.new(params)
   new_trans.attributes = params
   new_trans.save
-  if new_trans.save #this is not working
+  if new_trans.save
     200
   else
     400

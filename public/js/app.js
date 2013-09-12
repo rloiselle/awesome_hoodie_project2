@@ -21,9 +21,9 @@ $(document).ready(function(){
     e.preventDefault();
   });
 
-  $('#quanity .dropdown-menu li a').on('click',function (e){
-    $('#quanity .btn:first-child').text($(this).text());
-    $('#quanity .btn:first-child').val($(this).text());
+  $('#quantity .dropdown-menu li a').on('click',function (e){
+    $('#quantity .btn:first-child').text($(this).text());
+    $('#quantity .btn:first-child').val($(this).text());
     counter++;
     e.preventDefault();
     if (counter == 3) {
@@ -31,29 +31,26 @@ $(document).ready(function(){
     }
   });
 
-  $('#submit').on('click',function(){
+    $('#order_form').on('submit',function (){
+
     var schoolLogo = $('#school-logo .btn:first-child').val();
     var size = $('#size .btn:first-child').val();
-    var quanity = $('#quanity .btn:first-child').val();
-    if (counter == 3) {
-      $('#submit').data("logo",schoolLogo);
-      $('#submit').data("size",size);
-      $('#submit').data("quanity",quanity);
-    }
-    // console.log(schoolLogo);
-    // console.log(size);
-    // console.log(quanity);
-    // console.log($('#submit'));
-    // console.log(document.getElementById('submit'));
-    // console.log($('#submit').data());
-    // console.log(counter);
-    // var parm = $(this).data("logo");
-    // console.log(parm)
-    // $("order_review#logord").add(parm);
-     // $(this).data("logo").load('order_review.erb');
+    var quantity = $('#quantity .btn:first-child').val();
 
-    window.location.href ="/order_review/" + schoolLogo + "/" + size;
-
+      $('#order_logo').val(schoolLogo);
+      $('#order_size').val(size);
+      $('#order_quantity').val(quantity);
+      if ($('#order_logo').val() == null || $('#order_logo').val() == "") {
+        alert('Please be sure to select a logo.');
+        return false;
+      }
+      if ($('#order_size').val() == null || $('#order_size').val() == "") {
+        alert('Please be sure to select a size.');
+        return false;
+      }
+      if ($('#order_quantity').val() == null || $('#order_quantity').val() == "") {
+        alert('Please be sure to select a quantity.');
+        return false;
+      }
   });
-
 });

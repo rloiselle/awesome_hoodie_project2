@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 ruby '2.0.0'
 
 gem 'sinatra'
+
 gem 'dm-core'
 gem 'dm-migrations'
 gem 'dm-timestamps'
@@ -23,3 +24,6 @@ group :development, :test do
   gem 'guard'
   gem 'guard-rspec'
 end
+
+gem 'newrelic_rpm'
+# gem 'mongrel'

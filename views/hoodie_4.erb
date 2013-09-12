@@ -13,7 +13,7 @@
         <div class="span8">
         <h2>Gildan (18700) <span class="muted">Classic Fit, Vintage Classic</span></h2>
         <p class="lead">This hoodie is a heavier-weight (8.0 oz) with a classic fit (more roomy than relaxed). Perfect for being comfy and cozy! This hoodie runs large and includes a 3XL size option.</p>
-        <p class="lead"><strong>Price: $25</strong></p>
+        <p class="lead"><strong>Price: $28</strong></p>
 
       </div>
  
@@ -53,8 +53,8 @@
 <div class="span4">  
   <br />
   <br />
-  <div class="btn-group" id="quanity">
-    <button class="btn">Quanity</button>
+  <div class="btn-group" id="quantity">
+    <button class="btn">Quantity</button>
     <button class="btn dropdown-toggle" data-toggle="dropdown">
       <span class="caret"></span>
     </button>
@@ -75,31 +75,29 @@
 <div class="span4">
   <br />
   <br />
+  <form method="post" action="/order_review" id="order_form">
+    <input name="order[quantity]" type="hidden" id="order_quantity" value="">
+    <input name="order[size]" type="hidden" id="order_size" value="">
+    <input name="order[logo]" type="hidden" id="order_logo" value="">
+    <input name="order[style]" type="hidden" id="order_style" value="Gildan (18700)">
+    <input name="order[image]" type="hidden" id="order_image" value='"img/gildan_front_male.jpg"'>
   <div class="btn-group" >
-    <button id="submit" class="btn">
+    <a class="addtocart" href="order_review"><button id="submit" class="btn">
       Add To Shopping Cart
-    </button>
+    </button></a>
   </div>
+</form>
 </div>
 <div class="span4">
   <br />
   <br />
-  <div class="btn-group" >
-    <a class="back" href="/"><button id="submit" class=" offset btn btn-info">
+  <div class="btn-group">
+    <a class="back" href="/"><button id="submit" class="btn btn-info">
      Go Back
    </button></a>
   </div>
 </div>
    </div>
-
-
-
-
-
-
-
-
-
         <h3>Fiber Content</h3>
         <ul>
           <li>50% Cotton</li>
@@ -150,10 +148,7 @@
             <td>+/- 1</td>
           </tr> 
         </table>
-      </div>
-   
+</div>
 
-
-   
 
 

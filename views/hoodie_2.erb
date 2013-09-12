@@ -15,7 +15,7 @@
         <div class="span8">
         <h2>Bella+Canvas (c3739) <span class="muted">Poly-Cotton Fleece Hoodie</span></h2>
         <p class="lead">This is a "normal" weight hoodie with a relaxed fit that's perfect for being comfy and cozy! The sizing runs a bit small for guys and fairly average for women so be sure to check the measurements.</p>
-        <p class="lead"><strong>Price: $25</strong></p>
+        <p class="lead"><strong>Price: $28</strong></p>
 
       </div>
  
@@ -55,8 +55,8 @@
 <div class="span4">  
   <br />
   <br />
-  <div class="btn-group" id="quanity">
-    <button class="btn">Quanity</button>
+  <div class="btn-group" id="quantity">
+    <button class="btn">Quantity</button>
     <button class="btn dropdown-toggle" data-toggle="dropdown">
       <span class="caret"></span>
     </button>
@@ -77,12 +77,21 @@
 <div class="span4">
   <br />
   <br />
-  <div class="btn-group" >
+  <form method="post" action="/order_review" id="order_form">
+    <input name="order[quantity]" type="hidden" id="order_quantity" value="">
+    <input name="order[size]" type="hidden" id="order_size" value="">
+    <input name="order[logo]" type="hidden" id="order_logo" value="">
+    <input name="order[style]" type="hidden" id="order_style" value="Bella+Canvas (c3739) Poly-Cotton Fleece Hoodie">
+    <input name="order[image]" type="hidden" id="order_image" value='"img/3739_front_female.jpg"'>
+    <div class="btn-group" >
+      <a class="addtocart" href="order_review">
     <button id="submit" class="btn">
       Add To Shopping Cart
-    </button>
+    </button></a>
   </div>
+</form> 
 </div>
+
 <div class="span4">
   <br />
   <br />
