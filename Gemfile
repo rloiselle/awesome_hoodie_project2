@@ -25,4 +25,6 @@ group :development, :test do
   gem 'guard'
   gem 'guard-rspec'
 end
+
+gem 'newrelic_rpm'
 # gem 'mongrel'
