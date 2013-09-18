@@ -11,6 +11,7 @@ gem 'dm-timestamps'
 group :production do
   gem 'pg'
   gem 'dm-postgres-adapter'
+  gem 'do_postgres'
 end
 
 group :development do
